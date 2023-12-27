@@ -18,15 +18,17 @@ export class MyLoggerService extends ConsoleLogger{
                }
                await fsPromises.appendFile(path.join(__dirname,'..','..','logs','mylogFile.log'), formattedEntry)
           } catch (error) {
-               
+               if(error instanceof Error) console.error(error.message)
           }
      }
      log(message:any,context?:string){
           const entry = `${context}\t${message}`
+          this.logToFile(entry)
           super.log(message,context)
      }
      error(message: any, stackOrContext?: string) {
          const entry = `${stackOrContext}\t${message}`
+         this.logToFile(entry)
          super.error(message, stackOrContext)
      }
 }
