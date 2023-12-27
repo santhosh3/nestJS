@@ -1,0 +1,35 @@
+we need to start nestJS first need to install nest framwork globally in laptop
+
+npm i -g @nest/cli  => use this cmd to install nestJS globally
+
+then need to create a project for that we need to type
+
+nest new <projectName>  => use this cmd to create a boiler plate for your project
+
+In order to create a module for specific use then type
+
+nest g module <moduleName> => use this cmd to create a module
+
+creating a controller for that module
+
+nest g controller <moduleName> => this will create a service for that module
+
+creating a service for that module
+
+nest g service <moduleName> => this will create a service for that module
+
+
+pipes are useFull to our code u know write
+
+
+now going to dto's where It is used to validation like pipes middleware like this 
+
+npx prisma init
+npx prisma migrate deploy --name init
+
+
+nest g resource employee
+
+^|^ the above one gives the boiler plate code of employee it include module service controller with restAPI
+
+-
